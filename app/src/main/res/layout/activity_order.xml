@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary"
+            app:title="外帶Pizza">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pizza"
+                app:layout_collapseMode="parallax"/>
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/pizzatype"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <RadioGroup
+                android:id="@+id/pizza_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_pizza1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="夏威夷pizza $200"/>
+                <RadioButton
+                    android:id="@+id/radio_pizza2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="總匯pizza $200"/>
+                <RadioButton
+                    android:id="@+id/radio_pizza3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="墨西哥pizza $200"/>
+                <RadioButton
+                    android:id="@+id/radio_pizza4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="海陸pizza $200"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="是否加購其他商品："
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/parmesan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="醬烤雞翅腿(8塊) $149"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"/>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chili_oil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="可樂(600ml) $30"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/egg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="蛋塔(3塊) $99"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"/>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/soup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="玉米濃湯(1杯) $40"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"/>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/fry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="炸物拼盤(薯條、雞米花、小香腸) $149"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_send"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

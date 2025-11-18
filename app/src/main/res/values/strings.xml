@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FinalProject</string>
+    <string name="loginmsg">外帶者可以線上訂購餐點，內用者可以線上訂位\n外帶者:\n帳號:Togo\n密碼:54321\n\n內用訂位者:\n帳號:Forhear\n密碼:12345</string>
+    <string name="pizzatype">要訂購的pizza品項(9吋)：</string>
+
+    <string-array name="number_array">
+        <item>1位</item>
+        <item>2位</item>
+        <item>3位</item>
+        <item>4位</item>
+        <item>5位</item>
+    </string-array>
+
+</resources>
